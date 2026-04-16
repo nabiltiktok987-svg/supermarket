@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f9;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 105px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6366f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px 20px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #6366f1;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #6366f1;
+  color: white;
+  width: 217px;
+}
+
+tr:nth-child(even) {
+  background: #ececec;
+}
+
+button.delete {
+  background: #910202;
+  color: white;
+  border: none;
+  padding: 9px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  left: 5px;
+}
+
+input {
+  outline: grey;
+}
+
+a {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+
+/* selling */
+
+#pro_td {
+  position: relative;
+  left: -10px;
+  top: 17px;
+  font-family: "Aref Ruqaa", ser;
+  font-size: 26px;
+  background-color: #6366f1;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 99px;
+}
+
+td input {
+  width: 61px;
+  margin-right: 54px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>إدارة المنتجات - فريش ماركت</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="/46271.jpg">
+   <link rel="stylesheet" href="pro.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+   <div class="dashboard-container">
+      <aside class="sidebar">
+         <div class="logo"><i class="fas fa-leaf"></i> <span>فريش ماركت</span></div>
+         <nav>
+            <a href="index.html"><i class="fas fa-th-large"></i> الرئيسية</a>
+            <a href="pro.html" class="active"><i class="fas fa-box"></i> المنتجات</a>
+            <a href="bills.html"><i class="fas fa-clipboard-list"></i> الكاشير</a>
+         </nav>
+      </aside>
+
+      <main class="main-content">
+         <header class="top-header">
+            <div class="page-title">
+               <h1>قائمة المنتجات</h1>
+            </div>
+         </header>
+
+         <div class="container">
+            <div class="form">
+               <input type="text" id="name" placeholder="المنتج">
+               <input type="number" id="price" placeholder="سعر الجمله">
+               <input type="number" id="old_price" placeholder="سعر البيع">
+               <input type="text" id="count" placeholder="الكميه">
+               <button onclick="addProduct()" id="submitBtn">أضف المنتج</button>
+               <button class="update">تحديث المنتج</button>
+            </div>
+
+            <input type="text" id="search" placeholder="ابحث عن منتج أو طلب..." onkeyup="searchProduct()">
+
+            <table>
+               <thead>
+                  <tr class="tr1">
+                     <th>المنتج</th>
+                     <th>سعر الجمله</th>
+                     <th>سعر البيع</th>
+                     <th>الكميه</th>
+                     <th>المكسب</th>
+                     <th>احذف</th>
+                     <th>تعديل</th>
+                  </tr>
+               </thead>
+               <tbody id="tableBody">
+               </tbody>
+            </table>
+         </div>
+         </section>
+      </main>
+   </div>
+   <script src="product.js"></script>
+</body>
+
+
+</html>

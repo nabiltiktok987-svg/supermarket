@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="/46271.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="sell1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fas fa-leaf"></i>
+        <span>فريش ماركت</span>
+      </div>
+      <nav>
+        <a href="index.html"><i class="fas fa-th-large"></i> الرئيسية</a>
+        <a href="pro.html"><i class="fas fa-box"></i> المنتجات</a>
+        <a href="bills.html" class="active"><i class="fas fa-clipboard-list"></i> الكاشير</a>
+
+
+      </nav>
+    </aside>
+  </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="pos-grid">
+      <div class="input-section">
+        <h3>إضافة منتج للفاتورة</h3>
+        <input type="text" id="prodName" placeholder="اسم المنتج">
+        <input type="number" id="prodPrice" placeholder="السعر">
+        <input type="number" id="prodQty" placeholder="الكمية" value="1">
+        <button onclick="addToCart()">إضافة إلى السلة</button>
+      </div>
+
+      <div class="bill-section">
+        <h3 class="now">الفاتورة الحالية</h3>
+        <hr class="hr1">
+        <table id="billTable">
+          <thead>
+            <tr>
+              <th>المنتج</th>
+              <th>السعر</th>
+              <th>الكمية</th>
+              <th>المجموع</th>
+            </tr>
+          </thead>
+          <tbody id="billBody"></tbody>
+        </table>
+
+        <div class="total-area">
+          <p>إجمالي الفاتورة : <span id="grandTotal">0</span> جنيه</p>
+          <button class="print-btn" onclick="window.print()">طباعة الفاتورة</button>
+          <button class="clear-btn" onclick="clearCart()">تصفير السلة</button>
+        </div>
+      </div>
+    </div>
+    <section class="recent-orders">
+      <div class="section-header">
+        <h2>العمليات الأخيرة</h2>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>المنتج</th>
+              <th>الكمية</th>
+              <th>السعر</th>
+              <th>التاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody1">
+          </tbody>
+
+        </table>
+      </div>
+    </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
