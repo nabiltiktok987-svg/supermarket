@@ -7,15 +7,20 @@ body {
   background: #f4f6f9;
 }
 
+
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  /* عرض مرن يناسب الشاشات */
+  max-width: 1200px;
+  /* أقصى عرض لضمان عدم تمددها بشكل مبالغ فيه */
+  margin: 20px auto;
+  /* أهم تعديل: يوسط الصفحة تلقائياً من اليمين واليسار */
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   position: relative;
-  left: 105px;
+  /* تم حذف left: 105px لأنه هو سبب المشكلة */
 }
 
 h1 {
@@ -25,18 +30,38 @@ h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .form {
   display: flex;
+  flex-wrap: wrap;
+  /* يسمح للعناصر بالنزول لسطر جديد إذا ضاقت الشاشة */
   gap: 10px;
   margin-bottom: 15px;
 }
 
 .form input {
   flex: 1;
-  padding: 10px;
+  /* يجعل المدخلات تتوزع بالتساوي */
+  min-width: 150px;
+  /* يمنع صغر حجم الحقل بشكل يفسد الشكل */
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  /* يظهر شريط تمرير إذا كان الجدول أعرض من الشاشة */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  /* يضمن بقاء الجدول بشكل منتظم دون تداخل الكلام */
+}
+
 
 .form button {
   padding: 10px 20px;
@@ -98,6 +123,7 @@ input {
 a {
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }

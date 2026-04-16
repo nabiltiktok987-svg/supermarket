@@ -36,26 +36,27 @@
                <input type="number" id="old_price" placeholder="سعر البيع">
                <input type="text" id="count" placeholder="الكميه">
                <button onclick="addProduct()" id="submitBtn">أضف المنتج</button>
-               <button class="update">تحديث المنتج</button>
             </div>
 
             <input type="text" id="search" placeholder="ابحث عن منتج أو طلب..." onkeyup="searchProduct()">
+            <div class="table-wrapper">
+               <table>
+                  <thead>
+                     <tr class="tr1">
+                        <th>المنتج</th>
+                        <th>سعر الجمله</th>
+                        <th>سعر البيع</th>
+                        <th>الكميه</th>
+                        <th>المكسب</th>
+                        <th>احذف</th>
+                        <th>تعديل</th>
+                     </tr>
+                  </thead>
+                  <tbody id="tableBody">
+                  </tbody>
+               </table>
 
-            <table>
-               <thead>
-                  <tr class="tr1">
-                     <th>المنتج</th>
-                     <th>سعر الجمله</th>
-                     <th>سعر البيع</th>
-                     <th>الكميه</th>
-                     <th>المكسب</th>
-                     <th>احذف</th>
-                     <th>تعديل</th>
-                  </tr>
-               </thead>
-               <tbody id="tableBody">
-               </tbody>
-            </table>
+            </div>
          </div>
          </section>
       </main>

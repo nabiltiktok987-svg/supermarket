@@ -149,10 +149,12 @@ body {
   background: #eef2ff;
   color: #6366f1;
 }
+
 .green {
   background: #f0fdf4;
   color: #22c55e;
 }
+
 .orange {
   background: #fff7ed;
   color: #f59e0b;
@@ -215,4 +217,57 @@ a {
   top: 34px;
   right: 222px;
   width: 351%;
+}
+
+
+
+/* التجاوب مع الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    /* تحويل القائمة الجانبية لتكون فوق المحتوى */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .sidebar nav {
+    display: flex;
+    justify-content: space-around;
+    /* توزيع الأزرار بالعرض */
+  }
+
+  .sidebar nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .sidebar .logo {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .main-content {
+    margin-right: 0;
+    /* إلغاء الهوامش الجانبية */
+    padding: 10px;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    /* عرض كارت واحد في الصف */
+  }
+
+  .top-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }

@@ -7,6 +7,7 @@
   --white: #ffffff;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,13 +19,20 @@ body {
   background-color: var(--bg-color);
   color: var(--text-main);
 }
+
 .container {
-  max-width: 1000px;
-  margin: auto;
-  background: white;
+  width: 90%;
+  /* عرض مرن يناسب الشاشات */
+  max-width: 1200px;
+  /* أقصى عرض لضمان عدم تمددها بشكل مبالغ فيه */
+  margin: 20px auto;
+  /* أهم تعديل: يوسط الصفحة تلقائياً من اليمين واليسار */
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* تم حذف left: 105px لأنه هو سبب المشكلة */
 }
 
 .hr1 {
@@ -51,12 +59,11 @@ h1 {
 .pos-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  gap: 24px;
   margin-top: 0;
   position: relative;
-  bottom: 832px;
-  right: 220px;
-  width: 1019px;
+  bottom: 752px;
+  margin-right: 206px;
 }
 
 table {
@@ -79,6 +86,8 @@ h3 {
   left: -15px;
 }
 
+
+
 td {
   padding: 15px;
   border-bottom: 1px solid #f1f5f9;
@@ -93,6 +102,7 @@ input {
   border-radius: 5px;
   outline: none;
 }
+
 button {
   width: 90%;
   padding: 10px;
@@ -109,12 +119,14 @@ table {
   border-collapse: collapse;
   margin-top: 10px;
 }
+
 th,
 td {
   border-bottom: 1px solid #eee;
   padding: 12px;
   text-align: center;
 }
+
 th {
   background-color: #f8f9fa;
 }
@@ -126,15 +138,18 @@ th {
   background: #ecf0f1;
   border-radius: 5px;
 }
+
 #grandTotal {
   font-size: 1.5em;
   color: #e74c3c;
   font-weight: bold;
 }
+
 .clear-btn {
   background: #6366f1;
   margin-top: 10px;
 }
+
 .print-btn {
   background: #9b9000;
   margin-top: 10px;
@@ -189,14 +204,13 @@ th {
 
 /* Table */
 .recent-orders {
-  background: var(--white);
   padding: 22px;
   border-radius: 24px;
   box-shadow: var(--shadow);
   position: relative;
-  bottom: 733px;
-  right: 570px;
-  width: 670px;
+  bottom: 342px;
+  right: 34px;
+  width: 360px;
 }
 
 .section-header {
@@ -226,4 +240,101 @@ td {
 tbody tr {
   position: relative;
   left: 34px;
+}
+
+
+
+/* التجاوب مع الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    /* تحويل القائمة الجانبية لتكون فوق المحتوى */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .sidebar nav {
+    display: flex;
+    justify-content: space-around;
+    /* توزيع الأزرار بالعرض */
+  }
+
+  .sidebar nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .sidebar .logo {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .main-content {
+    margin-right: 0;
+    /* إلغاء الهوامش الجانبية */
+    padding: 10px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-section {
+    position: relative;
+    bottom: -96px;
+    right: -195px;
+    width: 447px;
+  }
+
+  .bill-section {
+    position: relative;
+    bottom: -391px;
+    right: -618px;
+    width: 332px;
+  }
+
+  .now {
+    position: relative;
+    top: -29px;
+    right: -24px;
+  }
+
+  .hr1 {
+    width: 119px;
+    height: 4px;
+    background: #6366f1;
+    border-radius: 14px;
+    border: none;
+    position: relative;
+    bottom: 13px;
+    right: -28px;
+  }
+
+  .table {
+    width: 132%;
+    border-collapse: collapse;
+  }
+
+  tbody tr {
+    position: relative;
+    left: 1px;
+  }
+
+  .recent-orders {
+    background: var(--white);
+    padding: 22px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    position: relative;
+    bottom: 390px;
+    right: 62px;
+    width: 124px;
+  }
+
 }
